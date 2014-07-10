@@ -1,0 +1,7 @@
+name = Picture URL
+description = Render url in views
+core = 7.x
+php = 5.2
+
+files[] = picture_url_formatter.inc
+

@@ -1,0 +1,5 @@
+<?php
+
+function picture_url_views_data_alter(&$data) {
+  $data['users']['picture']['field']['handler'] = 'picture_url_custom_handler';
+}
