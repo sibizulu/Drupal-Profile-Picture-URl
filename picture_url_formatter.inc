@@ -24,7 +24,7 @@ class picture_url_custom_handler extends views_handler_field_user_picture {
     global $base_url;
     if ($picture_fid = $this->get_value($values)) {
       $picture = file_load($picture_fid);
-      $output = str_replace('public://',$base_url.'/sites/default/files/',image_style_url($this->options['image_style'],$picture->uri));
+       $output = ($this->options['image_style'] == "")? str_replace('public://',$base_url.'/sites/default/files/',$picture->uri): image_style_url($style,$picture->uri);
     }
     else {
       $output = $base_url.'/misc/druplicon.png';;
